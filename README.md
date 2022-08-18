@@ -18,6 +18,6 @@ For installers for operating systems other than linux see https://docs.conda.io/
 You may need to reopen your shell after installing miniconda
 
     conda create -n beryl python=3.10
-    source activate beryl
+    conda activate beryl
     conda install --file requirements.txt
 
