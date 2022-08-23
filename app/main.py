@@ -5,6 +5,7 @@ from waitress import serve
 import markdown
 import re
 from bs4 import BeautifulSoup
+import bs4
 
 from config import config
 
@@ -48,12 +49,22 @@ def div_wrap_h_tags(html:str)->str:
     output_str += '</div>'*len(levels)
     return html_prefix + output_str         
 
+def total_text_length(tag) -> int:
+    if isinstance(tag, bs4.element.NavigableString):
+        return len(str(tag))
+    if isinstance(tag, list):
+        return sum([total_text_length(c) for c in tag])
+    try:
+        return total_text_length(tag.contents)
+    except:
+        return len(str(tag))
+
 def add_class_to_short_lists(html:str) -> str:
     # TODO filter out lists with child bullet points
     soup = BeautifulSoup(html.strip(),'html.parser')
     ul_tags = soup.find_all('ul')
     for ul_tag in ul_tags:
-        if max([len(str(c)) for c in ul_tag.children]) < config['maximum_pill_length']:
+        if max([total_text_length(c) for c in ul_tag.children]) < config['maximum_pill_length']:
             ul_tag['class'] = ul_tag.get('class', []) + ['pill-list']
     return ''.join([str(c) for c in soup.contents])
 
