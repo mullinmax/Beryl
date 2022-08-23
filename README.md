@@ -9,7 +9,7 @@ named after the rare gemstone: https://en.wikipedia.org/wiki/Beryl
 For installers for operating systems other than linux see https://docs.conda.io/en/latest/miniconda.html
 
     curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -s --output miniconda.sh
-    chmod +x miniconda_installer.sh
+    chmod +x miniconda.sh
     ./miniconda.sh -u
     rm miniconda.sh
 
@@ -47,5 +47,5 @@ or for detached mode
 ### Publishing to docker
 
     docker login
-    docker build --tag mullinmax/beryl:0.0.0 .
-    docker push mullinmax/beryl:0.0.0
+    docker build --tag mullinmax/beryl:latest .
+    docker push mullinmax/beryl:latest
