@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
 
-{% block body %}{{ body }}{% endblock %}
+{% block body %}
+<div class="thumbnail circle-image"><img src="{{ profile_picture_url() }}" alt="Profile Picture"></div>
+{{ body }}
+{% endblock %}
 {% block script %}{% endblock %}

@@ -1,6 +1,7 @@
 # Maxwell Mullin
 farm-boy turned technocrat
 
+
 ## Contact Information
 
 ✉️inbox@max-was-here.com

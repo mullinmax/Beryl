@@ -7,5 +7,6 @@ def static_file(path):
 
 config = {
     'app_name':'max-was-here.com',
-    'app_url':'https://max-was-here.com'
+    'app_url':'https://max-was-here.com',
+    'profile_picture_url':static_file('img/headshot.jpg')
 }

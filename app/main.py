@@ -51,7 +51,7 @@ def div_wrap_h_tags(html:str)->str:
                 levels.pop()
                 output_str += '</div>'
         levels.append(cur_level)
-        output_str += '<div>' + tag
+        output_str += f'<div class="h{cur_level}-section">' + tag
     output_str += '</div>'*len(levels)
     return html_prefix + output_str         
 
