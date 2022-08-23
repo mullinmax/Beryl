@@ -14,13 +14,6 @@ app = Flask(__name__)
 def root():
     return redirect("./resume", code=302)
 
-@app.route('/resume')
-def resume():
-    values = {
-        'template_name_or_list':'resume.html',
-        'title':'This is the title'
-    }
-    return render_template(**config|values)
 
 from bs4 import BeautifulSoup
 def div_wrap_h_tags(html:str)->str:
@@ -55,7 +48,18 @@ def div_wrap_h_tags(html:str)->str:
     output_str += '</div>'*len(levels)
     return html_prefix + output_str         
 
-@app.route('/test')
+def add_class_to_short_lists(html:str) -> str:
+    # TODO filter out lists with child bullet points
+    soup = BeautifulSoup(html.strip(),'html.parser')
+    ul_tags = soup.find_all('ul')
+    for ul_tag in ul_tags:
+        if max([len(str(c)) for c in ul_tag.children]) < config['maximum_pill_length']:
+            ul_tag['class'] = ul_tag.get('class', []) + ['pill-list']
+    return ''.join([str(c) for c in soup.contents])
+
+
+
+@app.route('/resume')
 def test():
     values = {
         'template_name_or_list':'resume/resume.tmpl',
@@ -64,7 +68,7 @@ def test():
 
     with open('./app/static/md/resume.md') as f:
         # https://python-markdown.github.io/extensions/attr_list/
-        values['body'] = div_wrap_h_tags(markdown.markdown(f.read(), extensions=['attr_list']))
+        values['body'] = div_wrap_h_tags(add_class_to_short_lists(markdown.markdown(f.read(), extensions=['attr_list'])))
 
     return render_template(**config|values)
 

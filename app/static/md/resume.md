@@ -1,22 +1,11 @@
 # Maxwell Mullin
-farm-boy turned technocrat
 
+> farm-boy turned technocrat
+ 
 
-## Contact Information
+## Education
 
-✉️inbox@max-was-here.com
-
-📞937.768.8185
-
-🏠 179 Garfield Ave, Cincinnati Ohio
-
-🌐 max-was-here.com
-
-
-## Education {.education_class}
-
-Ohio University (2014-2018)
-B.S. Computer Science
+Ohio University B.S. Computer Science (2014-2018)
 
 ## Professional Experience
 
@@ -29,7 +18,7 @@ Azure Data Developer - Category Management (August 2021 - August 2022)
 - Formalizing team software development life cycle (Azure Devops)
 
 ### 84.51° - Kroger Precision Marketing
-Senior Data Scientist / Engineer - P&LS Product Partners (June 2018 - August 2021)
+Senior Data Scientist - P&LS Product Partners (June 2018 - August 2021)
 
  - Developed and scaled key ETL process in Python & SQL
  - Developed Internal reporting tool with ~100 users leveraging SQL & Python
@@ -58,3 +47,73 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
  - Ran labs, held office hours, graded assignments/quizzes/exams
 
 ## Technology
+
+## Programming Languages
+
+- Python
+- SQL
+- HTML + CSS + JS
+- H2H
+- BASH
+- C++
+- C
+- R
+
+## Tools & Platforms
+
+- CI/CD
+- Git
+- GitHub
+- Linux
+- SQL Database Design
+- Docker
+- Azure
+- Tableau
+- Power BI
+
+## Projects
+
+- H2H programming language 
+- Beryl dockerized flask app to host mark down files in 
+
+## Hobbies
+
+ - Self Hosted Webservices
+ - Dungeons and Dragons
+ - Mechanical Keyboards
+ - 3D modeling & printing
+ - Home Automation
+ - Wood Working
+ - Used Enterprise Servers
+ - Guitar/Piano/Drums
+
+## References
+
+Please Reachout for reference contact information
+
+### Tyler Reagan
+
+Data Developer
+84.51°
+### Aaron Robeson
+
+Senior Data Scientist
+84.51°
+### Parker Kain
+
+Senior Data Scientist
+84.51°
+
+### Reginald Nelton
+Azure Data Developer
+Tenneco
+
+## Contact Information
+
+✉️inbox@max-was-here.com
+
+📞937.768.8185
+
+🏠 179 Garfield Ave, Cincinnati Ohio
+
+🌐 max-was-here.com
