@@ -1,2 +1,4 @@
 flask
 waitress
+markdown
+beautifulsoup4

@@ -44,4 +44,8 @@ or for detached mode
     docker run -d -p 5000:5000 beryl    
 
 
+### Publishing to docker
 
+    docker login
+    docker build --tag mullinmax/beryl:0.0.0 .
+    docker push mullinmax/beryl:0.0.0
