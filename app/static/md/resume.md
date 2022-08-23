@@ -1,8 +1,11 @@
+<div class='thumbnail circle-image'>
+    <img src="/static/img/headshot.jpg">
+</div>
+
 # Maxwell Mullin
 
-> farm-boy turned technocrat
+`farm-boy turned technocrat`
  
-
 ## Education
 
 Ohio University B.S. Computer Science (2014-2018)
@@ -46,14 +49,13 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
  - Ran labs, held office hours, graded assignments/quizzes/exams
 
-## Technology
 
 ## Programming Languages
 
 - Python
 - SQL
 - HTML + CSS + JS
-- H2H
+- [H2H](https://github.com/mullinmax/H2H)
 - BASH
 - C++
 - C
@@ -73,8 +75,8 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## Projects
 
-- H2H programming language 
-- Beryl dockerized flask app to host mark down files in 
+- H2H programming language [github.com/mullinmax/H2H](https://github.com/mullinmax/H2H)
+- Beryl dockerized flask app to host mark down files. Example: [max-was-here.com](https://max-was-here.com)
 
 ## Hobbies
 
@@ -91,29 +93,34 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 Please Reachout for reference contact information
 
+### Reginald Nelton
+
+Azure Data Developer
+Tenneco
+
 ### Tyler Reagan
 
 Data Developer
 84.51°
+
 ### Aaron Robeson
 
 Senior Data Scientist
 84.51°
+
 ### Parker Kain
 
 Senior Data Scientist
 84.51°
 
-### Reginald Nelton
-Azure Data Developer
-Tenneco
-
 ## Contact Information
 
-✉️inbox@max-was-here.com
+✉️[inbox@max-was-here.com](mailto:inbox@max-was-here.com)
 
-📞937.768.8185
+📞[937.768.8185](tel:+19377688185)
 
 🏠 179 Garfield Ave, Cincinnati Ohio
 
-🌐 max-was-here.com
+🌐 [max-was-here.com](https://max-was-here.com)
+
+
