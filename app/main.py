@@ -1,6 +1,6 @@
 #!/home/maxwell/miniconda3/envs/done-gen/bin/python
 import json
-from flask import Flask, request, jsonify, render_template, redirect, url_for
+from flask import Flask, request, jsonify, render_template, redirect, url_for, send_file
 from waitress import serve
 import markdown
 import re
@@ -69,19 +69,31 @@ def add_class_to_short_lists(html:str) -> str:
     return ''.join([str(c) for c in soup.contents])
 
 
-
-@app.route('/resume')
+@app.route('/resume', methods=['GET', 'POST'])
 def test():
     values = {
         'template_name_or_list':'resume/resume.tmpl',
         'title':'resume'
     }
 
-    with open('./app/static/md/resume.md') as f:
+    with open('./app/static/md/maxwell_mullin_resume.md') as f:
         # https://python-markdown.github.io/extensions/attr_list/
         values['body'] = div_wrap_h_tags(add_class_to_short_lists(markdown.markdown(f.read(), extensions=['attr_list'])))
 
     return render_template(**config|values)
+
+@app.route('/download_resume_md')
+def download_resume_md():
+    return send_file('./static/md/maxwell_mullin_resume.md', as_attachment=True)
+
+from headless_pdfkit import generate_pdf
+@app.route('/make_pdf')
+def make_pdf():
+    ret = generate_pdf(test())
+    with open('output.pdf', 'wb') as w:
+        w.write(ret)
+
+
 
 serve(app, host="0.0.0.0", port=5000)
 

@@ -91,36 +91,28 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## References
 
-Please Reachout for reference contact information
+Please reachout for reference contact information
 
 ### Reginald Nelton
 
-Azure Data Developer
-Tenneco
+Azure Data Developer - Tenneco
 
 ### Tyler Reagan
 
-Data Developer
-84.51°
+Data Developer - 84.51°
 
 ### Aaron Robeson
 
-Senior Data Scientist
-84.51°
+Senior Data Scientist - 84.51°
 
 ### Parker Kain
 
-Senior Data Scientist
-84.51°
+Senior Data Scientist - 84.51°
 
 ## Contact Information
 
-✉️[inbox@max-was-here.com](mailto:inbox@max-was-here.com)
-
-📞[937.768.8185](tel:+19377688185)
-
-🏠 179 Garfield Ave, Cincinnati Ohio
-
-🌐 [max-was-here.com](https://max-was-here.com)
-
-
+ - [inbox@max-was-here.com](mailto:inbox@max-was-here.com)
+ - [937.768.8185](tel:+19377688185)
+ - 179 Garfield Ave, Cincinnati Ohio
+ - [max-was-here.com](https://max-was-here.com)
+ - [LinkedIn](https://www.linkedin.com/in/maxwell-mullin-413070b4/)
