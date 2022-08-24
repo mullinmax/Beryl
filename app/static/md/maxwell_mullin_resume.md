@@ -4,7 +4,7 @@
 
 # Maxwell Mullin
 
-`farm-boy turned technocrat`
+`farm boy turned technocrat`
  
 ## Education
 
@@ -18,7 +18,7 @@ Azure Data Developer - Category Management (August 2021 - August 2022)
 - Maintained ~50 existing Azure ETL pipelines *Python, SQL, DataBricks, Pyspark, Azure Storage Account, SQL server*
 - Developed more efficient ETL pipelines to reduce cost, development time, & error rate. *Python, SQL, pyodbc, pandas, Azure*
 - Automated documentation processes for database diagrams, user permissions *Python, plantUML*
-- Formalized team software development life cycle *Azure Devops, Python*
+- Formalized team software development life cycle (SDLC) *Azure DevOps, Python*
 
 ### 84.51° - Kroger Precision Marketing
 Senior Data Scientist - P&LS Product Partners (June 2018 - August 2021)
@@ -27,12 +27,12 @@ Senior Data Scientist - P&LS Product Partners (June 2018 - August 2021)
  - Developed and maintained BULLSEYE *SQL, Python, Apex*
  - Automated solutions for DSRs, CSAs & AMs *Python, SQL, Apex, Tableau*
  - Coordinated process changes with partners at Kroger, Inmar, & Liveramp
- - Developed and ran technical training sessions *Git, GitHub, Linux*
+ - Developed and ran technical training sessions on Git, GitHub, and Linux
 
 ### 84.51°
 Data Engineer Intern (June 2017-August 2018)
 
- - Worked in team to develop an ETL pipeline (Nikon) for processing files from partners with web UI dashboard *Angular*
+ - Worked in team to develop an ETL pipeline (Nikon) for processing files from partners with web UI dashboard *Python, SQL, Angular*
 
 ### Ohio University
 Research developer (August 2016 - May 2018)
@@ -77,7 +77,7 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## Projects
 
-- **H2H programming language** [github.com/mullinmax/H2H](https://github.com/mullinmax/H2H)
+- **H2H programming language** A symbolic, BF-like language based in C++ & Python [github.com/mullinmax/H2H](https://github.com/mullinmax/H2H)
 - **Beryl** A dockerized flask web server to host mark down files. *Which is how this document was made:* [max-was-here.com](https://max-was-here.com)
 
 ## Hobbies
