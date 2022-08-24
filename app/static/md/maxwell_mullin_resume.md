@@ -23,8 +23,8 @@ Azure Data Developer - Category Management (August 2021 - August 2022)
 ### 84.51° - Kroger Precision Marketing
 Senior Data Scientist - P&LS Product Partners (June 2018 - August 2021)
 
- - Developed and scaled Python version of key SAS process (push to partner) *Python, SQL, Apex*
- - Developed and maintained BULLSEYE *SQL, Python, Apex*
+ - Developed and scaled Python version of key SAS process *Python, SQL, Apex*
+ - Developed and maintained internal reporting tool *SQL, Python, Apex*
  - Automated solutions for DSRs, CSAs & AMs *Python, SQL, Apex, Tableau*
  - Coordinated process changes with partners at Kroger, Inmar, & Liveramp
  - Developed and ran technical training sessions on Git, GitHub, and Linux
@@ -32,7 +32,7 @@ Senior Data Scientist - P&LS Product Partners (June 2018 - August 2021)
 ### 84.51°
 Data Engineer Intern (June 2017-August 2018)
 
- - Worked in team to develop an ETL pipeline (Nikon) for processing files from partners with web UI dashboard *Python, SQL, Angular*
+ - Worked in team to develop an ETL pipeline to process files from partners with web UI dashboard *Angular*
 
 ### Ohio University
 Research developer (August 2016 - May 2018)
@@ -77,8 +77,9 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## Projects
 
+- **Published bioinformatics reasearch paper** [https://www.mdpi.com/2223-7747/9/12/1751](https://www.mdpi.com/2223-7747/9/12/1751)
 - **H2H programming language** A symbolic, BF-like language based in C++ & Python [github.com/mullinmax/H2H](https://github.com/mullinmax/H2H)
-- **Beryl** A dockerized flask web server to host mark down files. *Which is how this document was made:* [max-was-here.com](https://max-was-here.com)
+- **Beryl** A dockerized flask web server to host markdown files. *Which is how this document was made:* [max-was-here.com](https://max-was-here.com)
 
 ## Hobbies
 
@@ -95,10 +96,12 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## References
 
- - **Reginald Nelton** *Tenneco* Azure Data Developer
- - **Tyler Reagan** *84.51°* Data Developer
- - **Aaron Robeson** *84.51°* Senior Data Scientist
- - **Parker Kain** *84.51°* Senior Data Scientist             
+Please reachout for reference contact information
+
+ - **Reginald Nelton** *Tenneco* Azure Data Developer 
+ - **Tyler Reagan** *84.51°* Data Developer 
+ - **Aaron Robeson** *84.51°* Senior Data Scientist 
+ - **Parker Kain** *84.51°* Senior Data Scientist                         
 
 ## Contact Information
 

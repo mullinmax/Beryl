@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
+    <style>  
       .article{
         font-family: Open Sans,Arial;
         color: #454545;
@@ -17,6 +17,14 @@
         line-height: 1.4;
         text-align: justify;
         display: grid;
+      }
+
+      code{
+        color: #454545;
+      }
+
+      em{
+        background-color: #e9f7f7;
       }
 
       .circle-image { 
@@ -65,10 +73,6 @@
         background-color:#e9f7f7;
       }
 
-      h3{
-        font-size: 1.5rem;
-      }
-
       .h3-section {
         display: block;
         background-color:#fff;
@@ -82,6 +86,11 @@
       /* On mouse-over, add a deeper shadow */
       .h3-section:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      .pill-list{
+        text-align: center;
+        padding-left: 0px;
       }
 
       .pill-list li{
@@ -107,11 +116,31 @@
       .article a:hover, .link1 a:focus, .link1 a:active {
         background-color: #b4e7f8;
       }
+
+      @media print{
+        .no-print{display: none;}
+        h1 {
+          font-weight: bold;
+          font-size: 20pt;
+        }
+        h2, h3, h4, h5, h6 { font-weight: bold }
+        h2, h3, h4, h5, h6, p { font-size: 10pt; }
+        p, ul{
+          margin-bottom: .5rem;
+        }
+        .thumbnail{
+          position: fixed;
+          top: 40px;
+          right: 40px;
+          width: 150px;
+          height: 150px;
+        }
+      }
     </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark no-print">
     <div class="container-fluid">
       <a class="navbar-brand" href="https://max-was-here.com">{{ app_name }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
