@@ -15,18 +15,18 @@ Ohio University B.S. Computer Science (2014-2018)
 ### Tenneco
 Azure Data Developer - Category Management (August 2021 - August 2022)
 
-- Maintained ~50 existing Azure ETL pipelines *Python, SQL, DataBricks, Pyspark, Azure Storage accounts, SQL server*
+- Maintained ~50 existing Azure ETL pipelines *Python, SQL, DataBricks, Pyspark, Azure Storage Account, SQL server*
 - Developed more efficient ETL pipelines to reduce cost, development time, & error rate. *Python, SQL, pyodbc, pandas, Azure*
 - Automated documentation processes for database diagrams, user permissions *Python, plantUML*
-- Formalizing team software development life cycle *Azure Devops, Python*
+- Formalized team software development life cycle *Azure Devops, Python*
 
 ### 84.51° - Kroger Precision Marketing
 Senior Data Scientist - P&LS Product Partners (June 2018 - August 2021)
 
- - Developed and scaled python version of key SAS process (push to partner) *Python, SQL, Apex*
+ - Developed and scaled Python version of key SAS process (push to partner) *Python, SQL, Apex*
  - Developed and maintained BULLSEYE *SQL, Python, Apex*
- - Automated solutions for DSRs, CSAs & AMs *Python, SQL, Apex*
- - Coordinating process changes with partners at Kroger, Inmar, & Liveramp
+ - Automated solutions for DSRs, CSAs & AMs *Python, SQL, Apex, Tableau*
+ - Coordinated process changes with partners at Kroger, Inmar, & Liveramp
  - Developed and ran technical training sessions *Git, GitHub, Linux*
 
 ### 84.51°
