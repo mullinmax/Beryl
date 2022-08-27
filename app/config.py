@@ -9,5 +9,11 @@ config = {
     'app_name':'max-was-here.com',
     'app_url':'https://max-was-here.com',
     'profile_picture_url':static_file('img/headshot.jpg'),
-    'maximum_pill_length':50
+    'maximum_pill_length':50,
+    'articles_dir':'./app/static/articles/',
+    'landing_page':'./a/resume',
+    'default_metadata':{
+        'title':'untitled',
+        'theme':'default.css'
+    }
 }
