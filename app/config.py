@@ -11,9 +11,11 @@ config = {
     'profile_picture_url':static_file('img/headshot.jpg'),
     'maximum_pill_length':50,
     'articles_dir':'./app/static/articles/',
+    'article_template_path':'article.html',
     'landing_page':'./a/resume',
     'default_metadata':{
         'title':'untitled',
-        'theme':'default.css'
+        'theme':'default.css',
+        'hidden':'false'
     }
 }

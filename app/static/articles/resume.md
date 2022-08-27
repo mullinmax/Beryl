@@ -1,3 +1,6 @@
+title:resume
+theme:default.css
+
 <div class='thumbnail circle-image' style='grid-column: span 2'>
     <img src="/static/img/headshot.jpg">
 </div>
