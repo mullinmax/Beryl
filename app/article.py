@@ -34,6 +34,8 @@ class article:
         args = {
             'template_name_or_list':config['article_template_path'],
             'title': self.metadata['title'],
+            'url_ext': self.metadata['url_ext'],
+            'active_nav_group':self.metadata['nav_group'],
             'theme_url': self.metadata['theme_url'],
             'body':self.body,
             'navigation':navigation

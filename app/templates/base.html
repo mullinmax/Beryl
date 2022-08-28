@@ -19,10 +19,10 @@
         <div class="navbar-nav">
           {% for group in navigation %}
             {% if group | length == 1 %}
-              <a class="nav-link active" aria-current="page" href="/a/{{ group[0]['url_ext'] }}">{{ group[0]['title'] }}</a>  
+              <a class="nav-link{% if group[0]['url_ext'] == url_ext %} active{% endif %}" aria-current="page" href="/a/{{ group[0]['url_ext'] }}">{{ group[0]['title'] }}</a>  
             {% else %}
               <div class="nav-item dropdown">            
-                <a class="nav-link dropdown-toggle" href="#" id="{{ group[0]['nav_group'] }}_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle{% if group[0]['nav_group'] == active_nav_group %} active{% endif %}" href="#" id="{{ group[0]['nav_group'] }}_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ group[0]['nav_group'] }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="{{ group[0]['nav_group'] }}_dropdown">
