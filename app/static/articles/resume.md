@@ -1,4 +1,4 @@
-title:resume
+title:Resume
 theme:default.css
 nav_order:-1
 

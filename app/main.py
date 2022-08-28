@@ -58,7 +58,6 @@ def generate_navigation():
     
     # sort all groups within navigation
     navigation.sort(key=lambda x: x[0]['nav_order'])
-    print(navigation)
     return navigation
     
 def render_all_articles(navigation):
@@ -77,8 +76,13 @@ def get_article(url_ext, group=None):
         return all_articles[path]
     return all_articles['404']
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return all_articles['404'], 404
 
-
+@app.errorhandler(500)
+def internal_error(e):
+    return all_articles['500'], 500
 
 serve(app, host="0.0.0.0", port=5000)
 
