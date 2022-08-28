@@ -13,8 +13,9 @@ from article import article
 
 app = Flask(__name__)
 
-# object where we store pre-rendered articles
 all_articles = {}
+navigation = []
+
 
 @app.route('/')
 def root():
@@ -25,7 +26,12 @@ def download_resume_md():
     return send_file('./static/md/maxwell_mullin_resume.md', as_attachment=True)
 
 @app.before_first_request
-def parse_all_articles():
+def precalculate():
+    parse_all_articles()
+    generate_navigation()
+    render_all_articles()
+    
+def parse_all_articles():    
     article_paths = []
     for directory in os.walk(config['articles_dir'], followlinks=True):
         for file in directory[2]:
@@ -35,10 +41,29 @@ def parse_all_articles():
         a = article(path=path)
         all_articles[a.metadata['url_ext']] = a
 
+def generate_navigation():    
+    # get list of all groups
+    groups = {a.metadata['nav_group'] for a in all_articles.values() if a.metadata['nav_group'] != ''}
+    for group in groups:
+        navigation.append([a for a in all_articles.values() if a.metadata['nav_group'] == group])
+    navigation += [a for a in all_articles.values() if a.metadata['nav_group'] == '']
+
+    # sort all articles
+    
+    # nav = [
+    #     [article],
+    #     [article, article, article]
+    # ]
+
+@app.route('/a/<group>/<url_ext>')
 @app.route('/a/<url_ext>')
-def get_article(url_ext):
-    if url_ext in all_articles:
-        return all_articles[url_ext].render(all_articles)
+def get_article(url_ext, group=None):
+    if group is not None:
+        path = os.path.join(group, url_ext)
+    else:
+        path = url_ext
+    if path in all_articles:
+        return all_articles[path].render(all_articles)
     return all_articles['404'].render(all_articles)
 
 

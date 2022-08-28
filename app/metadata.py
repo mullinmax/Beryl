@@ -35,5 +35,6 @@ class metadata:
         
         # we don't need to check if these are in self.data since getitem falls back to defaults
         self.data['theme_url'] = url_for('static', filename=os.path.join('themes', self['theme']))
-        self.data['url_ext'] = self['path'].removeprefix(config['articles_dir']).removesuffix('.md')
         self.data['hidden'] = self.__flag_mapper__(self['hidden'])
+        self.data['url_ext'] = self['path'].removeprefix(config['articles_dir']).removesuffix('.md')
+        self.data['nav_group'] = os.path.dirname(self['url_ext'])

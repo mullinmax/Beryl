@@ -19,7 +19,7 @@
         <div class="navbar-nav">
           {% for url, article in all_articles.items() %}
             {% if not article.metadata['hidden'] %}
-              <a class="nav-link active" aria-current="page" href="{{ url }}">{{ article.metadata['title'] }}</a>  
+              <a class="nav-link active" aria-current="page" href="/a/{{ url }}">{{ article.metadata['title'] }}</a>  
             {% endif %}
           {% endfor %}
           <!-- <li class="nav-item dropdown">
