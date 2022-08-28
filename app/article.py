@@ -30,13 +30,13 @@ class article:
             self.metadata = metadata(data = md.Meta|{'path':self.path})
 
             
-    def render(self, all_articles=None):
+    def render(self, navigation=[]):
         args = {
             'template_name_or_list':config['article_template_path'],
             'title': self.metadata['title'],
             'theme_url': self.metadata['theme_url'],
             'body':self.body,
-            'all_articles':all_articles
+            'navigation':navigation
         }
 
         # render via template

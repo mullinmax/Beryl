@@ -17,21 +17,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav">
-          {% for url, article in all_articles.items() %}
-            {% if not article.metadata['hidden'] %}
-              <a class="nav-link active" aria-current="page" href="/a/{{ url }}">{{ article.metadata['title'] }}</a>  
+          {% for group in navigation %}
+            {% if group | length == 1 %}
+              <a class="nav-link active" aria-current="page" href="/a/{{ group[0]['url_ext'] }}">{{ group[0]['title'] }}</a>  
+            {% else %}
+              <div class="nav-item dropdown">            
+                <a class="nav-link dropdown-toggle" href="#" id="{{ group[0]['nav_group'] }}_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ group[0]['nav_group'] }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="{{ group[0]['nav_group'] }}_dropdown">
+                  {% for item in group %}
+                    <a class="dropdown-item" href="/a/{{ item['url_ext'] }}">{{ item['title'] }}</a>
+                  {% endfor %}
+                </div>  
+              </div>
             {% endif %}
           {% endfor %}
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> -->
         </div>  
       </div>
     </div>

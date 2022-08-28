@@ -1,5 +1,6 @@
 title:resume
 theme:default.css
+nav_order:-1
 
 <div class='thumbnail circle-image' style='grid-column: span 2'>
     <img src="/static/img/headshot.jpg">

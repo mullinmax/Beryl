@@ -14,8 +14,6 @@ from article import article
 app = Flask(__name__)
 
 all_articles = {}
-navigation = []
-
 
 @app.route('/')
 def root():
@@ -28,8 +26,8 @@ def download_resume_md():
 @app.before_first_request
 def precalculate():
     parse_all_articles()
-    generate_navigation()
-    render_all_articles()
+    navigation = generate_navigation()
+    render_all_articles(navigation)
     
 def parse_all_articles():    
     article_paths = []
@@ -42,18 +40,30 @@ def parse_all_articles():
         all_articles[a.metadata['url_ext']] = a
 
 def generate_navigation():    
-    # get list of all groups
-    groups = {a.metadata['nav_group'] for a in all_articles.values() if a.metadata['nav_group'] != ''}
-    for group in groups:
-        navigation.append([a for a in all_articles.values() if a.metadata['nav_group'] == group])
-    navigation += [a for a in all_articles.values() if a.metadata['nav_group'] == '']
-
-    # sort all articles
     
-    # nav = [
-    #     [article],
-    #     [article, article, article]
-    # ]
+    # get list of all navigation items (which are basically snippets of article metadata)
+    navigation_items = [a.metadata[['nav_group', 'url_ext', 'title', 'nav_order']] for a in all_articles.values() if not a.metadata['hidden']]
+
+    # get set of all groups
+    groups = {nav['nav_group'] for nav in navigation_items if nav['nav_group'] != ''}
+
+    navigation = []    
+    for group in groups:
+        navigation.append([a for a in navigation_items if a['nav_group'] == group])
+    navigation += [[a] for a in navigation_items if a['nav_group'] == '']
+
+    # sort articles within each group
+    for group in navigation:
+        group.sort(key=lambda x: x['nav_order'])
+    
+    # sort all groups within navigation
+    navigation.sort(key=lambda x: x[0]['nav_order'])
+    print(navigation)
+    return navigation
+    
+def render_all_articles(navigation):
+    for key, val in all_articles.items():
+        all_articles[key]=val.render(navigation)
 
 @app.route('/a/<group>/<url_ext>')
 @app.route('/a/<url_ext>')
@@ -62,9 +72,10 @@ def get_article(url_ext, group=None):
         path = os.path.join(group, url_ext)
     else:
         path = url_ext
+        
     if path in all_articles:
-        return all_articles[path].render(all_articles)
-    return all_articles['404'].render(all_articles)
+        return all_articles[path]
+    return all_articles['404']
 
 
 

@@ -9,6 +9,8 @@ class metadata:
     data:dict
 
     def __getitem__(self, key):
+        if isinstance(key, list):
+            return {k:self[k] for k in key}
         if key in self.data:
             return self.data[key]
         if key in config['default_metadata']:
@@ -38,3 +40,7 @@ class metadata:
         self.data['hidden'] = self.__flag_mapper__(self['hidden'])
         self.data['url_ext'] = self['path'].removeprefix(config['articles_dir']).removesuffix('.md')
         self.data['nav_group'] = os.path.dirname(self['url_ext'])
+        if 'nav_order' not in self.data:
+            self.data['nav_order'] = 0
+        else:
+            self.data['nav_order'] = int(self.data['nav_order'])
