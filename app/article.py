@@ -17,7 +17,7 @@ class article:
     def __post_init__(self):
         with open(self.path) as f:
             # create parser
-            md = markdown.Markdown(extensions = ['attr_list', 'tables', 'footnotes', 'meta', 'nl2br', 'toc', 'fenced_code', 'codehilite'])
+            md = markdown.Markdown(extensions = ['attr_list', 'tables', 'footnotes', 'meta', 'nl2br', 'toc', 'codehilite', 'fenced_code'])
 
             # parse  markdown to html
             self.body = md.convert(f.read())
@@ -36,7 +36,9 @@ class article:
             'title': self.metadata['title'],
             'url_ext': self.metadata['url_ext'],
             'active_nav_group':self.metadata['nav_group'],
-            'theme_url': self.metadata['theme_url'],
+            'style_structure': self.metadata['style_structure'],
+            'style_colorway': self.metadata['style_colorway'],
+            'style_code':self.metadata['style_code'],
             'body':self.body,
             'navigation':navigation
         }

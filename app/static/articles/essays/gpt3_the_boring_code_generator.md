@@ -114,3 +114,19 @@ END
 
 ## Sources
 [^1]:[https://en.wikipedia.org/wiki/GPT-3](https://en.wikipedia.org/wiki/GPT-3)
+
+
+
+
+~~~~
+def fix_capitalization(input):
+    words = input.split(' ')
+    return ' '.join([w[0].upper()+w[1:].lower() for w in words])
+
+fix_capitalization('an exAMplE StrIng')
+>>> 'An Example String'
+~~~~
+
+~~~~.html
+<p>HTML Document</p>
+~~~~
