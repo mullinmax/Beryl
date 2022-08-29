@@ -17,7 +17,7 @@ class article:
     def __post_init__(self):
         with open(self.path) as f:
             # create parser
-            md = markdown.Markdown(extensions = ['attr_list', 'tables', 'footnotes', 'meta'])
+            md = markdown.Markdown(extensions = ['attr_list', 'tables', 'footnotes', 'meta', 'nl2br', 'toc', 'fenced_code', 'codehilite'])
 
             # parse  markdown to html
             self.body = md.convert(f.read())

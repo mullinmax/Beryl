@@ -12,7 +12,7 @@ config = {
     'maximum_pill_length':50,
     'articles_dir':'./app/static/articles/',
     'article_template_path':'article.html',
-    'landing_page':'./a/resume',
+    'landing_page':'./a/about/welcome',
     'default_metadata':{
         'title':'untitled',
         'theme':'default.css',

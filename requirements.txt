@@ -2,3 +2,4 @@ flask
 waitress
 markdown
 beautifulsoup4
+pygments
