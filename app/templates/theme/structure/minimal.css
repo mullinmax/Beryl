@@ -1,0 +1,164 @@
+body{
+    background-color: var(--bg-1);
+}
+
+.article {
+    font-family: Open Sans, Arial;
+    color: var(--text-primary);
+    font-size: 16px;
+    margin: 2em auto;
+    max-width: 1000px;
+    padding: 1em;
+    line-height: 1.4;
+    text-align: justify;
+    display: grid;
+}
+
+em {
+    background-color: var(--bg-2);
+}
+
+.circle-image {
+    justify-self: center;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.circle-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* https://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/ */
+.thumbnail {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.thumbnail img.portrait {
+    width: 100%;
+    height: auto;
+}
+
+.h2-section {
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.h2-section:nth-child(even) {
+    background-color: var(--bg-3);
+}
+
+.h3-section {
+    display: block;
+    background-color: var(--bg-1);
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    /* 5px rounded corners */
+    padding: 5px;
+    margin: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.h3-section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pill-list {
+    text-align: center;
+    padding-left: 0px;
+}
+
+.pill-list li {
+    display: inline-block;
+    background-color: var(--bg-inverted-1);
+    color: var(--txt-inverted);
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin: 2px;
+}
+
+.article a {
+    border-bottom: .05em solid var(--bg-2);
+    box-shadow: inset 0 -0.05em 0 var(--bg-2);
+    color: inherit;
+    transition: background-color .25s cubic-bezier(.33, .66, .66, 1);
+    text-decoration: none;
+}
+
+.article a:hover,
+.link1 a:focus,
+.link1 a:active {
+    background-color: var(--bg-2);
+}
+
+blockquote {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20pt;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: 10pt;
+    }
+
+    p,
+    ul {
+        margin-bottom: .5rem;
+    }
+
+    .thumbnail {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        width: 150px;
+        height: 150px;
+    }
+}

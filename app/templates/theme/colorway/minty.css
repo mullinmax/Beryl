@@ -1,9 +1,11 @@
 /* Minty */
 :root{
-    --text-primary:#454545;
-    --text-inverted:#ffffff;
+    --txt-primary:#454545;
+    --txt-inverted:#ffffff;
     
-    --bg-primary:#2e3345;
-    --bg-secondary:#b4e7f8;
-    --bg-highlight:#e9f7f7;
+    --bg-1:#ffffff;
+    --bg-2:#b4e7f8;
+    --bg-3:#e9f7f7;
+
+    --bg-inverted-1:#2e3345;
 }

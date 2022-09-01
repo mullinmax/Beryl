@@ -2,7 +2,7 @@ title:resume
 theme:default.css
 nav_order:-1
 
-<div class='thumbnail circle-image' style='grid-column: span 2'>
+<div class='cover-img'>
     <img src="/static/img/headshot.jpg">
 </div>
 
@@ -57,27 +57,15 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## Programming Languages
 
-- Python
-- SQL
-- HTML + CSS + JS
-- plantUML
-- [H2H](https://github.com/mullinmax/H2H)
-- BASH
-- C++
-- C
-- R
+|      |   |        |                                       |               |    |   | | |
+|------|---|--------|---------------------------------------|---------------|----|---|-|-|
+|Python|SQL|plantUML|[H2H](https://github.com/mullinmax/H2H)|HTML + CSS + JS|BASH|C++|C|R|
 
 ## Tools & Platforms
 
-- CI/CD
-- Git
-- GitHub
-- Linux
-- SQL Database Design
-- Docker
-- Azure
-- Tableau
-- Power BI
+|     |   |      |     |                   |      |     |       |        |
+|-----|---|------|-----|-------------------|------|-----|-------|--------|
+|CI/CD|Git|GitHub|Linux|SQL Database Design|Docker|Azure|Tableau|Power BI|
 
 ## Projects
 
@@ -87,16 +75,10 @@ Computer Science Teaching Assistant (August 2015 - March 2016)
 
 ## Hobbies
 
- - Self Hosted Webservices
- - Dungeons and Dragons
- - Wood Working
- - Mechanical Keyboards
- - CAD & 3D printing
- - Home Automation
- - HomeLabs
- - Guitar/Piano/Drums
- - Disk Golf
- - Electric Vehicles
+|                       |                    |                  |                    |                 |
+|-----------------------|--------------------|------------------|--------------------|-----------------|
+|Self Hosted Webservices|Dungeons and Dragons|Wood Working      |Mechanical Keyboards|CAD & 3D printing|
+|Home Automation        |HomeLabs            |Guitar/Piano/Drums|Disk Golf           |Electric Vehicles|
 
 ## References
 

@@ -15,9 +15,9 @@ config = {
     'landing_page':'./a/about/welcome',
     'default_metadata':{
         'title':'untitled',
-        'style_structure':'default.css',
-        'style_colorway':'other.css',
-        'style_code':'default.css',
+        'style_structure':'resume.css',
+        'style_colorway':'minty.css',
+        'style_code':'material.css',
         'hidden':'false'
     }
 }

@@ -23,7 +23,6 @@ class article:
             self.body = md.convert(f.read())
 
             # restructure html to allow for more styling
-            self.body = self.__add_class_to_short_lists__(self.body)
             self.body = self.__div_wrap_h_tags__(self.body)
 
             # save metadata
@@ -78,21 +77,3 @@ class article:
         output_str += '</div>'*len(levels)
         return html_prefix + output_str
 
-    def __total_text_length__(self, tag) -> int:
-        if isinstance(tag, element.NavigableString):
-            return len(str(tag))
-        if isinstance(tag, list):
-            return sum([total_text_length(c) for c in tag])
-        try:
-            return total_text_length(tag.contents)
-        except:
-            return len(str(tag))
-
-    def __add_class_to_short_lists__(self, html:str) -> str:
-        # TODO filter out lists with child bullet points
-        soup = BeautifulSoup(html.strip(),'html.parser')
-        ul_tags = soup.find_all('ul')
-        for ul_tag in ul_tags:
-            if max([self.__total_text_length__(c) for c in ul_tag.children]) < config['maximum_pill_length']:
-                ul_tag['class'] = ul_tag.get('class', []) + ['pill-list']
-        return ''.join([str(c) for c in soup.contents])
