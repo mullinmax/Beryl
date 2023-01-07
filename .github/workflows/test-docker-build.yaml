@@ -13,4 +13,4 @@ jobs:
      - name: Build Docker image 
        run: docker build -t beryl .
      - name: Run tests inside the container
-       run: docker run beryl pytest
+       run: docker run beryl py.test
