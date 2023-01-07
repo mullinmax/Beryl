@@ -3,3 +3,4 @@ waitress
 markdown
 beautifulsoup4
 pygments
+pytest
