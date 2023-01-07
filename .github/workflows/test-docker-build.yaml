@@ -1,0 +1,16 @@
+# https://stackoverflow.com/questions/67134410/how-to-test-my-dockerfile-for-my-python-project-using-github-actions
+name: Docker build and test
+
+on: 
+  pull_request
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+  
+   steps:
+     - uses: actions/checkout@v2
+     - name: Build Docker image 
+       run: docker build -t samplepy .
+    #  - name: Run tests inside the container
+    #    run: docker run samplepy poetry run pytest
