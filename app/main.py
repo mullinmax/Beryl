@@ -19,9 +19,21 @@ all_articles = {}
 def root():
     return redirect(config['landing_page'], code=302)
 
-@app.route('/download_resume_md')
-def download_resume_md():
-    return send_file('./static/md/maxwell_mullin_resume.md', as_attachment=True)
+@app.route('/a/<group>/<url_ext>/md')
+@app.route('/a/<url_ext>/md')
+def download_resume_md(url_ext, group=None):
+    if group is not None:
+        path = os.path.join(group, url_ext)
+    else:
+        path = url_ext
+        
+    if path in all_articles:
+        return send_file(f'static/articles/{path}.md', as_attachment=True)
+
+    return all_articles['404']
+
+
+    # return send_file('./static/md/maxwell_mullin_resume.md', as_attachment=True)
 
 @app.before_first_request
 def precalculate():
@@ -84,7 +96,11 @@ def page_not_found(e):
 def internal_error(e):
     return all_articles['500'], 500
 
-serve(app, host="0.0.0.0", port=5000)
+def boot():
+    serve(app, host="0.0.0.0", port=5000)
+
+if __name__ == '__main__':
+    boot()
 
 
 
